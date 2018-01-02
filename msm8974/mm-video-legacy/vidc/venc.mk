@@ -57,6 +57,7 @@ libmm-venc-inc      += frameworks/av/include/media/stagefright
 LOCAL_MODULE                    := libOmxVenc
 LOCAL_MODULE_TAGS               := optional
 LOCAL_CFLAGS                    := $(libmm-venc-def)
+LOCAL_CFLAGS                    += -Wno-error
 LOCAL_C_INCLUDES                := $(libmm-venc-inc)
 
 LOCAL_SHARED_LIBRARIES    := liblog libutils libbinder libcutils \
@@ -100,6 +101,8 @@ LOCAL_SRC_FILES                 += venc/test/camera_test.cpp
 LOCAL_SRC_FILES                 += venc/test/venc_util.c
 LOCAL_SRC_FILES                 += venc/test/fb_test.c
 
+LOCAL_CFLAGS                    += -Wno-error
+
 include $(BUILD_EXECUTABLE)
 
 # -----------------------------------------------------------------------------
@@ -118,6 +121,8 @@ LOCAL_C_INCLUDES                += hardware/qcom/media/msm8974/mm-core/inc
 
 LOCAL_SRC_FILES                 := venc/test/video_encoder_test.c
 LOCAL_SRC_FILES                 += venc/test/queue.c
+
+LOCAL_CFLAGS                    += -Wno-error
 
 include $(BUILD_EXECUTABLE)
 

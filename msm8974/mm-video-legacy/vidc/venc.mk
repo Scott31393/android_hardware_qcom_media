@@ -109,6 +109,8 @@ LOCAL_SRC_FILES                 += venc/test/camera_test.cpp
 LOCAL_SRC_FILES                 += venc/test/venc_util.c
 LOCAL_SRC_FILES                 += venc/test/fb_test.c
 
+LOCAL_CFLAGS      += -Wno-error
+
 include $(BUILD_EXECUTABLE)
 
 # -----------------------------------------------------------------------------
@@ -128,6 +130,8 @@ LOCAL_HEADER_LIBRARIES          := generated_kernel_headers
 
 LOCAL_SRC_FILES                 := venc/test/video_encoder_test.c
 LOCAL_SRC_FILES                 += venc/test/queue.c
+
+LOCAL_CFLAGS      += -Wno-error
 
 include $(BUILD_EXECUTABLE)
 

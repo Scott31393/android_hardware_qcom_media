@@ -111,6 +111,8 @@ LOCAL_SHARED_LIBRARIES    := libutils liblog libOmxCore libOmxVdec libbinder
 LOCAL_SRC_FILES           := vdec/src/queue.c
 LOCAL_SRC_FILES           += vdec/test/omx_vdec_test.cpp
 
+LOCAL_CFLAGS            += -Wno-error
+
 include $(BUILD_EXECUTABLE)
 
 # ---------------------------------------------------------------------------------
@@ -130,6 +132,8 @@ LOCAL_HEADER_LIBRARIES          := generated_kernel_headers
 
 LOCAL_SRC_FILES                 := vdec/src/message_queue.c
 LOCAL_SRC_FILES                 += vdec/test/decoder_driver_test.c
+
+LOCAL_CFLAGS            += -Wno-error
 
 include $(BUILD_EXECUTABLE)
 
